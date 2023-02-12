@@ -1,4 +1,5 @@
 import { createIcon } from "@chakra-ui/icons";
+
 export { ReactComponent as LogoType } from "assets/logotype.svg";
 
 const ARROW_PATH =

@@ -59,7 +59,7 @@ export const NavDrawer: FC = () => {
                             {Sections.map((section) => (
                                 <Link
                                     key={section.id}
-                                    fontWeight="600"
+                                    fontWeight="500"
                                     colorScheme="purple"
                                     fontSize="lg"
                                 >
