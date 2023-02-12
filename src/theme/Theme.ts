@@ -40,6 +40,18 @@ const components = {
         defaultProps: {
             variant: "ghost",
         },
+        variants: {
+            outline: () => {
+                return {
+                    borderRadius: 0,
+                    _hover: {
+                        bg: "white",
+                        borderColor: "white",
+                        color: "gray.900",
+                    },
+                };
+            },
+        },
     },
 };
 

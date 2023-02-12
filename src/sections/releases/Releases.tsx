@@ -8,10 +8,10 @@ import { Box, Heading, Text, SimpleGrid, Flex } from "@chakra-ui/layout";
 import { ReleasesType } from "services/Data.api";
 import { useData } from "services/Data";
 import { ListenNowModal } from "shared/listen-now-modal/ListenNowModal";
+import { SectionIds } from "util/constants/Sections";
 import { PlayIcon, RightIcon } from "util/icons/Icon";
 
-import "./SectionReleases.scss";
-import { SectionIds } from "util/constants/Sections";
+import "./Releases.scss";
 
 export const SectionReleases: FC = () => {
     const { data } = useData();
@@ -105,13 +105,14 @@ export const SectionReleases: FC = () => {
                 mt={{ base: 4, md: 16 }}
                 py="8"
                 px="8"
-                pl="0"
-                _hover={{
-                    bg: "gray.900",
-                    textDecoration: "underline",
-                }}
-                _focus={{ bg: "gray.900" }}
+                // pl="0"
+                // _hover={{
+                //     bg: "gray.900",
+                //     textDecoration: "underline",
+                // }}
+                // _focus={{ bg: "gray.900" }}
                 color="white"
+                variant="outline"
                 rightIcon={<RightIcon ml="4" fontSize="lg" />}
             >
                 View all releases
