@@ -13,7 +13,7 @@ import {
 
 import { Socials } from "shared/socials/Socials";
 import { CloseIcon, LogoType, MenuIcon } from "util/icons/Icon";
-import { Sections } from "util/constants/Sections";
+import { scrollToSection, Sections } from "util/constants/Sections";
 
 export const NavDrawer: FC = () => {
     const { onClose, onOpen, isOpen } = useDisclosure();
@@ -62,6 +62,12 @@ export const NavDrawer: FC = () => {
                                     fontWeight="500"
                                     colorScheme="purple"
                                     fontSize="lg"
+                                    onClick={() => {
+                                        onClose();
+                                        setTimeout(() => {
+                                            scrollToSection(section.id);
+                                        }, 250);
+                                    }}
                                 >
                                     {section.label}
                                 </Link>

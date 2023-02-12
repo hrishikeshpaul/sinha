@@ -5,7 +5,7 @@ import { useBreakpointValue } from "@chakra-ui/media-query";
 
 import { Socials } from "shared/socials/Socials";
 import { MAX_WIDTH } from "util/constants/Layout";
-import { Sections } from "util/constants/Sections";
+import { scrollToSection, Sections } from "util/constants/Sections";
 
 import { NavDrawer } from "./NavDrawer";
 
@@ -21,6 +21,9 @@ export const Navbar: FC = () => {
                                 key={section.id}
                                 fontWeight="600"
                                 colorScheme="purple"
+                                onClick={() => {
+                                    scrollToSection(section.id);
+                                }}
                             >
                                 {section.label}
                             </Link>

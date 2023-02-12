@@ -1,22 +1,39 @@
+export enum SectionIds {
+    Landing = "section-landing",
+    Releases = "section-releases",
+    AboutMe = "section-about-me",
+    Events = "section-events",
+    Contact = "section-contact",
+}
+
 export const Sections = [
     {
-        id: "section-landing",
+        id: SectionIds.Landing,
         label: "Home",
     },
     {
-        id: "section-releases",
+        id: SectionIds.Releases,
         label: "Releases",
     },
     {
-        id: "section-about-me",
+        id: SectionIds.AboutMe,
         label: "About me",
     },
     {
-        id: "section-events",
+        id: SectionIds.Events,
         label: "Events",
     },
     {
-        id: "section-contact",
+        id: SectionIds.Contact,
         label: "Contact",
     },
 ];
+
+export const scrollToSection = (sectionId: SectionIds) => {
+    const section = document.querySelector(`#${sectionId}`);
+
+    section?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+    });
+};

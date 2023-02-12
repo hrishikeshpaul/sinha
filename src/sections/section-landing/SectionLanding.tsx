@@ -5,10 +5,11 @@ import { Center } from "@chakra-ui/layout";
 
 import { Title } from "shared/title/Title";
 import { DownIcon } from "util/icons/Icon";
+import { scrollToSection, SectionIds } from "util/constants/Sections";
 
 export const Landing: FC = () => {
     return (
-        <Center className="landing" h="full" w="full">
+        <Center className="landing" h="full" w="full" id={SectionIds.Landing}>
             <Title />
             <IconButton
                 aria-label="down button"
@@ -16,6 +17,9 @@ export const Landing: FC = () => {
                 bottom="18px"
                 size="lg"
                 icon={<DownIcon />}
+                onClick={() => {
+                    scrollToSection(SectionIds.Releases);
+                }}
             />
         </Center>
     );
