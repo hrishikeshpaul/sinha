@@ -1,19 +1,30 @@
-import { FC } from "react";
+import { FC, ReactNode, useLayoutEffect } from "react";
 
-import { Container } from "@chakra-ui/layout";
+import { BrowserRouter, useLocation } from "react-router-dom";
 
-import { Landing } from "sections/section-landing/SectionLanding";
-import { Navbar } from "shared/navbar/Navbar";
-import { Socials } from "shared/socials/Socials";
+import { DataProvider } from "services/Data";
+import { Router } from "router/Router";
 
 import "./App.css";
 
+const ScrollWrapper: FC<{ children: ReactNode }> = ({ children }) => {
+    const location = useLocation();
+
+    useLayoutEffect(() => {
+        document.documentElement.scrollTo(0, 0);
+    }, [location.pathname]);
+
+    return <>{children}</>;
+};
+
 export const App: FC = () => {
     return (
-        <Container className="App" maxW="container.lg">
-            <Navbar />
-            <Landing />
-            <Socials display={{ base: "none", md: "flex" }} />
-        </Container>
+        <BrowserRouter>
+            <ScrollWrapper>
+                <DataProvider>
+                    <Router />
+                </DataProvider>
+            </ScrollWrapper>
+        </BrowserRouter>
     );
 };
