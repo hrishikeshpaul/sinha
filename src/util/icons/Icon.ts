@@ -1,4 +1,5 @@
 import { createIcon } from "@chakra-ui/icons";
+export { ReactComponent as LogoType } from "assets/logotype.svg";
 
 const ARROW_PATH =
     "m26.71 10.29-10-10a1 1 0 0 0-1.41 0l-10 10 1.41 1.41L15 3.41V32h2V3.41l8.29 8.29z";
@@ -20,3 +21,5 @@ export {
 } from "react-icons/bs";
 
 export { HiOutlineMenu as MenuIcon } from "react-icons/hi";
+
+export { IoIosClose as CloseIcon } from "react-icons/io";
