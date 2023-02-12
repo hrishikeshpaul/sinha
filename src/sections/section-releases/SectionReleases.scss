@@ -1,0 +1,56 @@
+.section-releases {
+    .card {
+        display: flex;
+
+        .art {
+            width: 192px;
+            height: 192px;
+        }
+
+        .info {
+            padding-left: 16px;
+            font-weight: 500;
+
+            .title {
+                font-weight: 600;
+            }
+
+            .artists {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .first {
+        display: flex;
+        grid-row: 1 / 5;
+        flex-direction: column;
+
+        .art {
+            flex-grow: 1;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .info {
+            padding-left: 0;
+            padding-top: 16px;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .card:not(.first) {
+            .art {
+                width: 96px;
+                height: 96px;
+            }
+        }
+
+        .first {
+            .art {
+                height: 100%;
+            }
+            grid-auto-rows: max-content;
+        }
+    }
+}

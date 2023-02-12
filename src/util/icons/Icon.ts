@@ -15,6 +15,17 @@ export const DownIcon = createIcon({
     },
 });
 
+export const RightIcon = createIcon({
+    displayName: "RightIcon",
+    viewBox: "0 0 32 32",
+    d: ARROW_PATH,
+    defaultProps: {
+        transform: "rotate(90deg)",
+        fontSize: "2xl",
+    },
+});
+
+
 export {
     BsSpotify as SpotifyIcon,
     BsApple as AppleIcon,

@@ -4,8 +4,27 @@ export interface SocialsType {
     instagram: string;
 }
 
+export interface ArtistsType {
+    name: string;
+}
+
+export interface ReleasesType {
+    id: number;
+    art: string;
+    artThumbnail: string;
+    title: string;
+    artists: ArtistsType[];
+    description: string;
+    stream: {
+        spotify: string;
+        appleMusic: string;
+        youtube: string;
+    };
+}
+
 export interface DataType {
     socials: SocialsType;
+    releases: ReleasesType[];
 }
 
 const DATA_URL_DEV = "./data.json";

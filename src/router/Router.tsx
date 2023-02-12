@@ -4,14 +4,17 @@ import { Center, Container, Spinner } from "@chakra-ui/react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 import { Landing } from "sections/section-landing/SectionLanding";
+import { SectionReleases } from "sections/section-releases/SectionReleases";
 import { Socials } from "shared/socials/Socials";
 import { Navbar } from "shared/navbar/Navbar";
+import { MAX_WIDTH } from "util/constants/Layout";
 
 const SectionsContent: FC = () => {
     return (
         <>
             <Landing />
             <Socials display={{ base: "none", md: "flex" }} />
+            <SectionReleases />
         </>
     );
 };
@@ -19,7 +22,7 @@ const SectionsContent: FC = () => {
 export const Router: FC = () => {
     return (
         <>
-            <Container className="App" maxW="container.lg">
+            <Container className="App" maxW={MAX_WIDTH}>
                 <Navbar />
 
                 <Suspense

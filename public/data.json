@@ -6,7 +6,89 @@
     },
     "releases": [
         {
-
+            "id": 0,
+            "art": "https://drive.google.com/uc?id=1kK60uB-PvPOVYzAHPxGSPSodQ28gT00m",
+            "artThumnail": "",
+            "title": "Name of the song",
+            "artists": [
+                {
+                    "name": "SINHA"
+                }
+            ],
+            "description": "A song can include one single verse or many different verses and refrains. In The Beatles song ''While My Guitar Gently Weeps,'' there are a series of verses with a refrain that is sung only at the end of the three verses, . Songs are used as a way of uniting the world through history, culture, entertainment, and emotion.",
+            "stream": {
+                "spotify": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ",
+                "appleMusic": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ",
+                "youtube": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ"
+            }
+        },
+        {
+            "id": 1,
+            "art": "https://drive.google.com/uc?id=1-HoO_b-qD5IjXwujfh7BBAKN-ETkveEg",
+            "artThumnail": "",
+            "title": "Name of the song",
+            "artists": [
+                {
+                    "name": "SINHA"
+                }
+            ],
+            "description": "",
+            "stream": {
+                "spotify": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ",
+                "appleMusic": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ",
+                "youtube": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ"
+            }
+        },
+        {
+            "id": 2,
+            "art": "https://drive.google.com/uc?id=1nBMRW5ImD-OmFcqWSbXReDgEr6WyTFSP",
+            "artThumnail": "",
+            "title": "Name of the song",
+            "artists": [
+                {
+                    "name": "SINHA"
+                }
+            ],
+            "description": "",
+            "stream": {
+                "spotify": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ",
+                "appleMusic": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ",
+                "youtube": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ"
+            }
+        },
+        {
+            "id": 3,
+            "art": "https://drive.google.com/uc?id=1nBMRW5ImD-OmFcqWSbXReDgEr6WyTFSP",
+            "artThumnail": "",
+            "title": "Name of the song",
+            "artists": [
+                {
+                    "name": "SINHA"
+                }
+            ],
+            "description": "",
+            "stream": {
+                "spotify": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ",
+                "appleMusic": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ",
+                "youtube": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ"
+            }
+        },
+        {
+            "id": 4,
+            "art": "https://drive.google.com/uc?id=1nBMRW5ImD-OmFcqWSbXReDgEr6WyTFSP",
+            "artThumnail": "",
+            "title": "Name of the song",
+            "artists": [
+                {
+                    "name": "SINHA"
+                }
+            ],
+            "description": "",
+            "stream": {
+                "spotify": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ",
+                "appleMusic": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ",
+                "youtube": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ"
+            }
         }
     ]
 }
