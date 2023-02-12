@@ -1,6 +1,7 @@
 import { FC } from "react";
 
-import { Box, Center } from "@chakra-ui/layout";
+import { IconButton } from "@chakra-ui/button";
+import { Center } from "@chakra-ui/layout";
 
 import { Title } from "shared/title/Title";
 import { DownIcon } from "util/icons/Icon";
@@ -9,9 +10,12 @@ export const Landing: FC = () => {
     return (
         <Center className="landing" h="full" w="full">
             <Title />
-            <Box position="absolute" bottom="32px">
-                <DownIcon />
-            </Box>
+            <IconButton
+                aria-label="down button"
+                position="absolute"
+                bottom="18px"
+                icon={<DownIcon />}
+            />
         </Center>
     );
 };

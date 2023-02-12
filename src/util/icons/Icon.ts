@@ -18,3 +18,5 @@ export {
     BsApple as AppleIcon,
     BsInstagram as InstagramIcon,
 } from "react-icons/bs";
+
+export { HiOutlineMenu as MenuIcon } from "react-icons/hi";

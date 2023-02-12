@@ -11,7 +11,7 @@ export const App: FC = () => {
         <div className="App">
             <Navbar />
             <Landing />
-            <Socials />
+            <Socials display={{ base: "none", md: "flex" }} />
         </div>
     );
 };
