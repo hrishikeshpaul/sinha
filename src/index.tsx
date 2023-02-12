@@ -1,16 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import { App } from "./App";
+import reportWebVitals from "./reportWebVitals";
+
+import { ChakraProvider } from "@chakra-ui/provider";
+import {
+    ColorModeScript,
+    createLocalStorageManager,
+} from "@chakra-ui/color-mode";
+
+import theme from "theme/Theme";
+
+const manager = createLocalStorageManager("scm");
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+    document.getElementById("root") as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <React.StrictMode>
+        <ChakraProvider theme={theme} colorModeManager={manager}>
+            <ColorModeScript initialColorMode="dark" storageKey="scm" />
+            <App />
+        </ChakraProvider>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
