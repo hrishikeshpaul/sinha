@@ -30,6 +30,8 @@ export {
     BsSpotify as SpotifyIcon,
     BsApple as AppleIcon,
     BsInstagram as InstagramIcon,
+    BsYoutube as YoutubeIcon,
+    BsPlayFill as PlayIcon,
 } from "react-icons/bs";
 
 export { HiOutlineMenu as MenuIcon } from "react-icons/hi";

@@ -2,12 +2,12 @@ import { FC } from "react";
 
 import { Button } from "@chakra-ui/button";
 import { Image } from "@chakra-ui/image";
-import { Box, Heading, Text, SimpleGrid } from "@chakra-ui/layout";
+import { Box, Heading, Text, SimpleGrid, Flex } from "@chakra-ui/layout";
 
 import { useData } from "services/Data";
+import { PlayIcon, RightIcon } from "util/icons/Icon";
 
 import "./SectionReleases.scss";
-import { RightIcon } from "util/icons/Icon";
 
 export const SectionReleases: FC = () => {
     const { data } = useData();
@@ -34,23 +34,41 @@ export const SectionReleases: FC = () => {
                             <>
                                 <Image className="art" src={release.art} />
 
-                                <Box className="info">
-                                    <Text className="title">
-                                        {release.title}
-                                    </Text>
-                                    <Text className="artists">
-                                        {release.artists
-                                            .map((artist) => artist.name)
-                                            .join(",")}
-                                    </Text>
-                                    <Text
-                                        className="description"
-                                        pt="1"
-                                        fontSize="sm"
-                                    >
-                                        {release.description}
-                                    </Text>
-                                </Box>
+                                <Flex
+                                    className="info"
+                                    flexDirection="column"
+                                    justifyContent="space-between"
+                                >
+                                    <Box>
+                                        <Text className="title">
+                                            {release.title}
+                                        </Text>
+                                        <Text className="artists">
+                                            {release.artists
+                                                .map((artist) => artist.name)
+                                                .join(",")}
+                                        </Text>
+                                        <Text
+                                            className="description"
+                                            pt="1"
+                                            fontSize="sm"
+                                            noOfLines={idx === 0 ? 10 : 3}
+                                        >
+                                            {release.description}
+                                        </Text>
+                                    </Box>
+
+                                    <Flex gap="4">
+                                        <Button
+                                            variant="outline"
+                                            size="sm"
+                                            mt="4"
+                                            leftIcon={<PlayIcon />}
+                                        >
+                                            Listen Now
+                                        </Button>
+                                    </Flex>
+                                </Flex>
                             </>
                         ) : null}
                     </Box>

@@ -14,6 +14,7 @@ export const Landing: FC = () => {
                 aria-label="down button"
                 position="absolute"
                 bottom="18px"
+                size="lg"
                 icon={<DownIcon />}
             />
         </Center>
