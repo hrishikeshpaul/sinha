@@ -8,7 +8,7 @@ import {
 const config: ThemeConfig = {
     initialColorMode: "dark",
     useSystemColorMode: false,
-    cssVarPrefix: 'sinha'
+    cssVarPrefix: "sinha",
 };
 
 const colors: Colors = {
@@ -34,6 +34,14 @@ const styles = {
     }),
 };
 
-const theme = extendTheme({ config, colors, styles });
+const components = {
+    Button: {
+        defaultProps: {
+            variant: "ghost",
+        },
+    },
+};
+
+const theme = extendTheme({ config, colors, styles, components });
 
 export default theme;
