@@ -25,9 +25,7 @@ export const NavDrawer: FC = () => {
                 aria-label="open menu drawer"
                 icon={<MenuIcon fontSize="15pt" />}
                 onClick={onOpen}
-                size={{ base: "md", md: "lg" }}
-                p="0"
-                ml="2"
+                ml="4"
             />
 
             <Modal

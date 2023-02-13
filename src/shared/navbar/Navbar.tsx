@@ -13,7 +13,7 @@ export const Navbar: FC = () => {
     const showNavDrawer = useBreakpointValue({ base: true, md: false });
     return (
         <Flex w="full" position="fixed" top="0" left="0" zIndex="1000">
-            <Container bg="gray.900" maxW={MAX_WIDTH} px="4" py="6">
+            <Container bg="gray.900" maxW={MAX_WIDTH} px="4" py="4">
                 <Center justifyContent={{ base: "flex-end", md: "center" }}>
                     <HStack spacing="8" display={{ base: "none", md: "flex" }}>
                         {Sections.map((section) => (

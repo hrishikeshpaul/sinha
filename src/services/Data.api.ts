@@ -2,6 +2,8 @@ export interface SocialsType {
     appleMusic: string;
     spotify: string;
     instagram: string;
+    youtube: string;
+    tidal: string;
 }
 
 export interface ArtistsType {

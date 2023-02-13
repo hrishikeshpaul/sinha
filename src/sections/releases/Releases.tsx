@@ -72,7 +72,7 @@ export const SectionReleases: FC = () => {
                                             className="description"
                                             pt="1"
                                             fontSize="sm"
-                                            noOfLines={idx === 0 ? 10 : 2}
+                                            noOfLines={4}
                                             display={
                                                 idx > 0
                                                     ? {
