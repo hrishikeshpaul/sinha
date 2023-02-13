@@ -12,6 +12,7 @@ export const Landing: FC = () => {
         <Center className="landing" h="full" w="full" id={SectionIds.Landing}>
             <Title />
             <IconButton
+                variant="ghost"
                 aria-label="down button"
                 position="absolute"
                 bottom="18px"

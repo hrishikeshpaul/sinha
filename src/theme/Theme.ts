@@ -38,10 +38,20 @@ const styles = {
 const components = {
     Button: {
         defaultProps: {
-            variant: "ghost",
+            variant: "outline",
         },
         variants: {
             outline: () => {
+                return {
+                    borderRadius: 0,
+                    _hover: {
+                        bg: "white",
+                        borderColor: "white",
+                        color: "gray.900",
+                    },
+                };
+            },
+            ghost: () => {
                 return {
                     borderRadius: 0,
                     _hover: {

@@ -29,7 +29,7 @@ export const Navbar: FC = () => {
                             </Link>
                         ))}
                     </HStack>
-                    {showNavDrawer && <Socials />}
+                    {showNavDrawer && <Socials orientation="row" />}
                     {showNavDrawer && <NavDrawer />}
                 </Center>
             </Container>

@@ -73,10 +73,14 @@ export const SectionReleases: FC = () => {
                                             pt="1"
                                             fontSize="sm"
                                             noOfLines={idx === 0 ? 10 : 2}
-                                            display={{
-                                                base: "none",
-                                                md: "-webkit-box",
-                                            }}
+                                            display={
+                                                idx > 0
+                                                    ? {
+                                                          base: "none",
+                                                          md: "-webkit-box",
+                                                      }
+                                                    : "-webkit-box"
+                                            }
                                         >
                                             {release.description}
                                         </Text>
@@ -86,6 +90,7 @@ export const SectionReleases: FC = () => {
                                         <Button
                                             variant="outline"
                                             mt="4"
+                                            fontSize="sm"
                                             leftIcon={<PlayIcon />}
                                             onClick={() => {
                                                 setCurrentRelease(release);
@@ -105,12 +110,6 @@ export const SectionReleases: FC = () => {
                 mt={{ base: 4, md: 16 }}
                 py="8"
                 px="8"
-                // pl="0"
-                // _hover={{
-                //     bg: "gray.900",
-                //     textDecoration: "underline",
-                // }}
-                // _focus={{ bg: "gray.900" }}
                 color="white"
                 variant="outline"
                 rightIcon={<RightIcon ml="4" fontSize="lg" />}

@@ -21,10 +21,13 @@ export const NavDrawer: FC = () => {
     return (
         <>
             <IconButton
+                variant="ghost"
                 aria-label="open menu drawer"
-                icon={<MenuIcon />}
+                icon={<MenuIcon fontSize="15pt" />}
                 onClick={onOpen}
-                fontSize="2xl"
+                size={{ base: "md", md: "lg" }}
+                p="0"
+                ml="2"
             />
 
             <Modal
@@ -75,7 +78,7 @@ export const NavDrawer: FC = () => {
                         </VStack>
 
                         <Center mt="16">
-                            <Socials />
+                            <Socials orientation="row" />
                         </Center>
                     </ModalBody>
                 </ModalContent>
