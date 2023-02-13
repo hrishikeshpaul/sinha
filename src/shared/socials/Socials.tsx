@@ -3,7 +3,13 @@ import { FC } from "react";
 import { IconButton } from "@chakra-ui/button";
 import { Flex, FlexProps } from "@chakra-ui/layout";
 
-import { AppleIcon, InstagramIcon, SpotifyIcon, YoutubeIcon } from "util/icons/Icon";
+import {
+    AppleIcon,
+    InstagramIcon,
+    SpotifyIcon,
+    TidalIcon,
+    YoutubeIcon,
+} from "util/icons/Icon";
 
 import "./Socials.scss";
 import { Tooltip } from "@chakra-ui/react";
@@ -36,6 +42,16 @@ export const Socials: FC<Props> = ({ orientation = "column", ...props }) => {
                 />
             </Tooltip>
             <Tooltip
+                label="Instagram"
+                placement={orientation === "row" ? "bottom" : "left"}
+            >
+                <IconButton
+                    size={{ base: "md", md: "lg" }}
+                    aria-label="instagram-icon"
+                    icon={<InstagramIcon />}
+                />
+            </Tooltip>
+            <Tooltip
                 label="Spotify"
                 placement={orientation === "row" ? "bottom" : "left"}
             >
@@ -46,6 +62,16 @@ export const Socials: FC<Props> = ({ orientation = "column", ...props }) => {
                 />
             </Tooltip>
             <Tooltip
+                label="Tidal"
+                placement={orientation === "row" ? "bottom" : "left"}
+            >
+                <IconButton
+                    size={{ base: "md", md: "lg" }}
+                    aria-label="tidal-icon"
+                    icon={<TidalIcon />}
+                />
+            </Tooltip>
+            <Tooltip
                 label="Youtube"
                 placement={orientation === "row" ? "bottom" : "left"}
             >
@@ -53,16 +79,6 @@ export const Socials: FC<Props> = ({ orientation = "column", ...props }) => {
                     size={{ base: "md", md: "lg" }}
                     aria-label="youtube-icon"
                     icon={<YoutubeIcon />}
-                />
-            </Tooltip>
-            <Tooltip
-                label="Instagram"
-                placement={orientation === "row" ? "bottom" : "left"}
-            >
-                <IconButton
-                    size={{ base: "md", md: "lg" }}
-                    aria-label="instagram-icon"
-                    icon={<InstagramIcon />}
                 />
             </Tooltip>
         </Flex>

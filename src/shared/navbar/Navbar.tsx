@@ -3,7 +3,6 @@ import { FC } from "react";
 import { Center, Container, Flex, Link, HStack } from "@chakra-ui/layout";
 import { useBreakpointValue } from "@chakra-ui/media-query";
 
-import { Socials } from "shared/socials/Socials";
 import { MAX_WIDTH } from "util/constants/Layout";
 import { scrollToSection, Sections } from "util/constants/Sections";
 
@@ -29,7 +28,6 @@ export const Navbar: FC = () => {
                             </Link>
                         ))}
                     </HStack>
-                    {showNavDrawer && <Socials orientation="row" />}
                     {showNavDrawer && <NavDrawer />}
                 </Center>
             </Container>

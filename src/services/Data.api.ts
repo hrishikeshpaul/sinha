@@ -10,18 +10,13 @@ export interface ArtistsType {
     name: string;
 }
 
-export interface ReleasesType {
+export interface ReleasesType extends SocialsType {
     id: number;
     art: string;
     artThumbnail: string;
     title: string;
     artists: ArtistsType[];
     description: string;
-    stream: {
-        spotify: string;
-        appleMusic: string;
-        youtube: string;
-    };
 }
 
 export interface DataType {

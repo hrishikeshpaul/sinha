@@ -1,24 +1,18 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 
 import { Button } from "@chakra-ui/button";
-import { useDisclosure } from "@chakra-ui/hooks";
 import { Image } from "@chakra-ui/image";
 import { Box, Heading, Text, SimpleGrid, Flex } from "@chakra-ui/layout";
 
-import { ReleasesType } from "services/Data.api";
 import { useData } from "services/Data";
-import { ListenNowModal } from "shared/listen-now-modal/ListenNowModal";
+import { ListenNowMenu } from "shared/listen-now-menu/ListenNowMenu";
 import { SectionIds } from "util/constants/Sections";
-import { PlayIcon, RightIcon } from "util/icons/Icon";
+import { RightIcon } from "util/icons/Icon";
 
 import "./Releases.scss";
 
 export const SectionReleases: FC = () => {
     const { data } = useData();
-    const { isOpen, onClose, onOpen } = useDisclosure();
-    const [currentRelease, setCurrentRelease] = useState<ReleasesType | null>(
-        null
-    );
 
     return (
         <Box
@@ -27,13 +21,6 @@ export const SectionReleases: FC = () => {
             className="section-releases"
             id={SectionIds.Releases}
         >
-            {currentRelease && (
-                <ListenNowModal
-                    isOpen={isOpen}
-                    onClose={onClose}
-                    release={currentRelease}
-                />
-            )}
             <Heading>RELEASES</Heading>
             <SimpleGrid
                 mt="16"
@@ -87,18 +74,7 @@ export const SectionReleases: FC = () => {
                                     </Box>
 
                                     <Flex gap="4">
-                                        <Button
-                                            variant="outline"
-                                            mt="4"
-                                            fontSize="sm"
-                                            leftIcon={<PlayIcon />}
-                                            onClick={() => {
-                                                setCurrentRelease(release);
-                                                onOpen();
-                                            }}
-                                        >
-                                            Listen Now
-                                        </Button>
+                                        <ListenNowMenu release={release} />
                                     </Flex>
                                 </Flex>
                             </>

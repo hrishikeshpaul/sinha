@@ -25,7 +25,6 @@ export const RightIcon = createIcon({
     },
 });
 
-
 export {
     BsSpotify as SpotifyIcon,
     BsApple as AppleIcon,
@@ -37,3 +36,5 @@ export {
 export { HiOutlineMenu as MenuIcon } from "react-icons/hi";
 
 export { IoIosClose as CloseIcon } from "react-icons/io";
+
+export { SiTidal as TidalIcon } from "react-icons/si";

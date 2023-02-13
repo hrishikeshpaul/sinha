@@ -4,6 +4,7 @@ import {
     Colors,
     StyleProps,
 } from "@chakra-ui/react";
+import { menuTheme } from "./MenuTheme";
 
 const config: ThemeConfig = {
     initialColorMode: "dark",
@@ -40,10 +41,15 @@ const components = {
         defaultProps: {
             variant: "outline",
         },
+        baseStyle: {
+            borderRadius: 0,
+        },
         variants: {
             outline: () => {
                 return {
-                    borderRadius: 0,
+                    _active: {
+                        color: "gray.900",
+                    },
                     _hover: {
                         bg: "white",
                         borderColor: "white",
@@ -53,7 +59,6 @@ const components = {
             },
             ghost: () => {
                 return {
-                    borderRadius: 0,
                     _hover: {
                         bg: "white",
                         borderColor: "white",
@@ -63,6 +68,7 @@ const components = {
             },
         },
     },
+    Menu: menuTheme
 };
 
 const theme = extendTheme({ config, colors, styles, components });
