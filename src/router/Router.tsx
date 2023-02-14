@@ -1,20 +1,25 @@
 import { FC, Suspense } from "react";
 
-import { Center, Container, Spinner } from "@chakra-ui/react";
+import { Center, Container, Spinner, Stack } from "@chakra-ui/react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 import { Landing } from "sections/landing/Landing";
 import { SectionReleases } from "sections/releases/Releases";
-import { Socials } from "shared/socials/Socials";
-import { Navbar } from "shared/navbar/Navbar";
+import { Socials } from "common/socials/Socials";
+import { Navbar } from "common/navbar/Navbar";
 import { MAX_WIDTH } from "util/constants/Layout";
+import { Contact } from "sections/contact/Contact";
+import { Footer } from "common/footer/Footer";
 
 const SectionsContent: FC = () => {
     return (
         <>
             <Landing />
-            <Socials display={{ base: "none", md: "flex" }} />
-            <SectionReleases />
+            <Stack spacing="32" mt="32">
+                <SectionReleases />
+                <Contact />
+            </Stack>
+            <Footer />
         </>
     );
 };
@@ -24,6 +29,7 @@ export const Router: FC = () => {
         <>
             <Container className="App" maxW={MAX_WIDTH}>
                 <Navbar />
+                <Socials display={{ base: "none", md: "flex" }} />
 
                 <Suspense
                     fallback={

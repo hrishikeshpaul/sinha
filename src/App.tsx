@@ -5,7 +5,7 @@ import { BrowserRouter, useLocation } from "react-router-dom";
 import { DataProvider } from "services/Data";
 import { Router } from "router/Router";
 
-import "./App.css";
+import "./App.scss";
 
 const ScrollWrapper: FC<{ children: ReactNode }> = ({ children }) => {
     const location = useLocation();

@@ -11,7 +11,7 @@ import {
     ModalOverlay,
 } from "@chakra-ui/modal";
 
-import { Socials } from "shared/socials/Socials";
+import { Socials } from "common/socials/Socials";
 import { CloseIcon, LogoType, MenuIcon } from "util/icons/Icon";
 import { scrollToSection, Sections } from "util/constants/Sections";
 
@@ -56,13 +56,14 @@ export const NavDrawer: FC = () => {
                         </Center>
                     </ModalHeader>
                     <ModalBody>
-                        <VStack spacing="4" mt="24">
+                        <VStack spacing="6" mt="24">
                             {Sections.map((section) => (
                                 <Link
                                     key={section.id}
                                     fontWeight="500"
                                     colorScheme="purple"
                                     fontSize="lg"
+                                    textTransform="uppercase"
                                     onClick={() => {
                                         onClose();
                                         setTimeout(() => {

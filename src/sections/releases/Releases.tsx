@@ -2,10 +2,11 @@ import { FC } from "react";
 
 import { Button } from "@chakra-ui/button";
 import { Image } from "@chakra-ui/image";
-import { Box, Heading, Text, SimpleGrid, Flex } from "@chakra-ui/layout";
+import { Box, Text, SimpleGrid, Flex } from "@chakra-ui/layout";
 
+import { Section } from "sections/Section";
 import { useData } from "services/Data";
-import { ListenNowMenu } from "shared/listen-now-menu/ListenNowMenu";
+import { ListenNowMenu } from "common/listen-now-menu/ListenNowMenu";
 import { SectionIds } from "util/constants/Sections";
 import { RightIcon } from "util/icons/Icon";
 
@@ -15,13 +16,11 @@ export const SectionReleases: FC = () => {
     const { data } = useData();
 
     return (
-        <Box
-            py="32"
-            px={{ base: 0, md: 0 }}
-            className="section-releases"
+        <Section
             id={SectionIds.Releases}
+            title="RELEASES"
+            className="section-releases"
         >
-            <Heading>RELEASES</Heading>
             <SimpleGrid
                 mt="16"
                 w="100%"
@@ -84,14 +83,12 @@ export const SectionReleases: FC = () => {
             </SimpleGrid>
             <Button
                 mt={{ base: 4, md: 16 }}
-                py="8"
-                px="8"
                 color="white"
-                variant="outline"
+                variant="big"
                 rightIcon={<RightIcon ml="4" fontSize="lg" />}
             >
-                View all releases
+                VIEW ALL RELEASES
             </Button>
-        </Box>
+        </Section>
     );
 };

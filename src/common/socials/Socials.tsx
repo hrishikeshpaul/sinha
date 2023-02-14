@@ -29,6 +29,7 @@ export const Socials: FC<Props> = ({ orientation = "column", ...props }) => {
             bottom={{ base: "0", md: "16px" }}
             right={{ base: "0", md: "16px" }}
             gap="4"
+            zIndex={999}
             {...props}
         >
             <Tooltip

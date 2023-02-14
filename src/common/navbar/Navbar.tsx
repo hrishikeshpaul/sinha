@@ -13,13 +13,18 @@ export const Navbar: FC = () => {
     return (
         <Flex w="full" position="fixed" top="0" left="0" zIndex="1000">
             <Container bg="gray.900" maxW={MAX_WIDTH} px="4" py="4">
-                <Center justifyContent={{ base: "flex-end", md: "center" }}>
+                <Center
+                    justifyContent={{ base: "flex-end", md: "center" }}
+                    textTransform="uppercase"
+                >
                     <HStack spacing="8" display={{ base: "none", md: "flex" }}>
                         {Sections.map((section) => (
                             <Link
                                 key={section.id}
                                 fontWeight="600"
                                 colorScheme="purple"
+                                textTransform="uppercase"
+                                fontSize="sm"
                                 onClick={() => {
                                     scrollToSection(section.id);
                                 }}

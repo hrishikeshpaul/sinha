@@ -26,7 +26,7 @@ export const ListenNowMenu: FC<Props> = ({ release }) => {
                 fontSize="sm"
                 leftIcon={<PlayIcon />}
             >
-                Listen Now
+                LISTEN NOW
             </MenuButton>
             <MenuList>
                 <MenuItem icon={<AppleIcon />}>

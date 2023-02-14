@@ -3,7 +3,7 @@ import { FC } from "react";
 import { IconButton } from "@chakra-ui/button";
 import { Center } from "@chakra-ui/layout";
 
-import { Title } from "shared/title/Title";
+import { Title } from "common/title/Title";
 import { DownIcon } from "util/icons/Icon";
 import { scrollToSection, SectionIds } from "util/constants/Sections";
 

@@ -4,7 +4,9 @@ import {
     Colors,
     StyleProps,
 } from "@chakra-ui/react";
+import { inputTheme } from "./InputTheme";
 import { menuTheme } from "./MenuTheme";
+import { textareaTheme } from "./TextareaTheme";
 
 const config: ThemeConfig = {
     initialColorMode: "dark",
@@ -43,6 +45,7 @@ const components = {
         },
         baseStyle: {
             borderRadius: 0,
+            textTransform: "uppercase",
         },
         variants: {
             outline: () => {
@@ -66,9 +69,18 @@ const components = {
                     },
                 };
             },
+            big: (props: any) => {
+                return {
+                    ...props.theme.components.Button.variants.outline(props),
+                    py: "8",
+                    px: "8",
+                };
+            },
         },
     },
-    Menu: menuTheme
+    Menu: menuTheme,
+    Input: inputTheme,
+    Textarea: textareaTheme,
 };
 
 const theme = extendTheme({ config, colors, styles, components });
