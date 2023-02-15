@@ -1,4 +1,4 @@
-import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
+import { defineStyle, defineStyleConfig } from "@chakra-ui/styled-system";
 
 const outline = defineStyle({
     borderRadius: 0, // remove the border radius

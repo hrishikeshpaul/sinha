@@ -1,8 +1,8 @@
 import { FC } from "react";
 
-import { IconButton } from "@chakra-ui/button";
+import { Button, IconButton } from "@chakra-ui/button";
 import { useDisclosure } from "@chakra-ui/hooks";
-import { Box, Center, VStack, Link } from "@chakra-ui/layout";
+import { Box, Center, VStack } from "@chakra-ui/layout";
 import {
     Modal,
     ModalBody,
@@ -45,7 +45,7 @@ export const NavDrawer: FC = () => {
                             onClick={onClose}
                             aria-label="close drawer"
                             icon={<CloseIcon />}
-                            fontSize="2xl"
+                            fontSize="3xl"
                         />
                     </Center>
                     <ModalHeader mt="20" p="0">
@@ -56,12 +56,11 @@ export const NavDrawer: FC = () => {
                         </Center>
                     </ModalHeader>
                     <ModalBody>
-                        <VStack spacing="6" mt="24">
+                        <VStack spacing="4" mt="24">
                             {Sections.map((section) => (
-                                <Link
+                                <Button
                                     key={section.id}
                                     fontWeight="500"
-                                    colorScheme="purple"
                                     fontSize="lg"
                                     textTransform="uppercase"
                                     onClick={() => {
@@ -72,7 +71,7 @@ export const NavDrawer: FC = () => {
                                     }}
                                 >
                                     {section.label}
-                                </Link>
+                                </Button>
                             ))}
                         </VStack>
 

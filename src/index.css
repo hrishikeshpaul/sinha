@@ -5,10 +5,19 @@ html,
 body {
     box-sizing: border-box;
     font-family: "Inter Tight", sans-serif;
+    scroll-margin-top: 72px;
 }
 
 html,
 body,
 #root {
     height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    *,
+    html,
+    body {
+        scroll-margin-top: 72px;
+    }
 }

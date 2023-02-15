@@ -34,6 +34,6 @@ export const scrollToSection = (sectionId: SectionIds) => {
 
     section?.scrollIntoView({
         behavior: "smooth",
-        block: "start"
+        block: "start",
     });
 };

@@ -5,7 +5,6 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 import { Landing } from "sections/landing/Landing";
 import { SectionReleases } from "sections/releases/Releases";
-import { Socials } from "common/socials/Socials";
 import { Navbar } from "common/navbar/Navbar";
 import { MAX_WIDTH } from "util/constants/Layout";
 import { Contact } from "sections/contact/Contact";
@@ -33,8 +32,6 @@ export const Router: FC = () => {
         <>
             <Container className="App" maxW={MAX_WIDTH}>
                 <Navbar />
-                <Socials display={{ base: "none", md: "flex" }} />
-
                 <Suspense
                     fallback={
                         <Center>

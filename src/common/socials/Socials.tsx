@@ -16,18 +16,19 @@ import { Tooltip } from "@chakra-ui/react";
 
 interface Props extends FlexProps {
     orientation?: "row" | "column";
+    isAboslute?: boolean;
 }
 
-export const Socials: FC<Props> = ({ orientation = "column", ...props }) => {
+export const Socials: FC<Props> = ({
+    orientation = "column",
+    isAboslute = true,
+    ...props
+}) => {
     return (
         <Flex
             className="socials"
             flexDirection={orientation}
-            bg="gray.900"
             p={{ base: 0, md: 2 }}
-            position={{ base: "relative", md: "fixed" }}
-            bottom={{ base: "0", md: "16px" }}
-            right={{ base: "0", md: "16px" }}
             gap="4"
             zIndex={999}
             {...props}

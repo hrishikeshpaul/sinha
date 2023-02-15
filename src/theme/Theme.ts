@@ -4,9 +4,11 @@ import {
     Colors,
     StyleProps,
 } from "@chakra-ui/react";
+
 import { inputTheme } from "./InputTheme";
 import { menuTheme } from "./MenuTheme";
 import { textareaTheme } from "./TextareaTheme";
+import { tooltipTheme } from "./TooltipTheme";
 
 const config: ThemeConfig = {
     initialColorMode: "dark",
@@ -41,7 +43,7 @@ const styles = {
 const components = {
     Button: {
         defaultProps: {
-            variant: "outline",
+            variant: "ghost",
         },
         baseStyle: {
             borderRadius: 0,
@@ -52,6 +54,10 @@ const components = {
                 return {
                     _active: {
                         color: "gray.900",
+                        borderColor: "gray.200",
+                    },
+                    _focus: {
+                        borderColor: "white",
                     },
                     _hover: {
                         bg: "white",
@@ -76,11 +82,20 @@ const components = {
                     px: "8",
                 };
             },
+            link: () => {
+                return {
+                    color: "white",
+                    _active: {
+                        color: "gray.300",
+                    },
+                };
+            },
         },
     },
     Menu: menuTheme,
     Input: inputTheme,
     Textarea: textareaTheme,
+    Tooltip: tooltipTheme,
 };
 
 const theme = extendTheme({ config, colors, styles, components });

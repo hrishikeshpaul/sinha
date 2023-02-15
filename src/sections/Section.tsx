@@ -14,7 +14,9 @@ interface Props {
 export const Section: FC<Props> = ({ id, title, className, children }) => {
     return (
         <Box px={{ base: 0, md: 0 }} className={className} id={id}>
-            <Heading mb="16">{title}</Heading>
+            <Heading mb="16">
+                {title}
+            </Heading>
             {children}
         </Box>
     );
