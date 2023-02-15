@@ -9,10 +9,6 @@ import {
     Text,
     Textarea,
 } from "@chakra-ui/react";
-import {
-    GoogleReCaptchaProvider,
-    GoogleReCaptcha,
-} from "react-google-recaptcha-v3";
 
 import { Section } from "sections/Section";
 import { SectionIds } from "util/constants/Sections";
@@ -28,7 +24,7 @@ export const Contact: FC = () => {
     return (
         <Section
             id={SectionIds.Contact}
-            className="secion-contact"
+            className="section-contact"
             title="CONTACT"
         >
             <SimpleGrid

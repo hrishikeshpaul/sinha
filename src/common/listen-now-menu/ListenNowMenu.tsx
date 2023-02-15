@@ -23,7 +23,7 @@ export const ListenNowMenu: FC<Props> = ({ release }) => {
                 as={Button}
                 variant="outline"
                 mt="4"
-                fontSize="sm"
+                fontSize="xs"
                 leftIcon={<PlayIcon />}
             >
                 LISTEN NOW

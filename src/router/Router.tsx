@@ -10,6 +10,8 @@ import { Navbar } from "common/navbar/Navbar";
 import { MAX_WIDTH } from "util/constants/Layout";
 import { Contact } from "sections/contact/Contact";
 import { Footer } from "common/footer/Footer";
+import { AboutMe } from "sections/about-me/AboutMe";
+import { Events } from "sections/events/Events";
 
 const SectionsContent: FC = () => {
     return (
@@ -17,6 +19,8 @@ const SectionsContent: FC = () => {
             <Landing />
             <Stack spacing="32" mt="32">
                 <SectionReleases />
+                <AboutMe />
+                <Events />
                 <Contact />
             </Stack>
             <Footer />
