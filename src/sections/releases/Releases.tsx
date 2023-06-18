@@ -8,7 +8,7 @@ import { Section } from "sections/Section";
 import { useData } from "services/Data";
 import { ListenNowMenu } from "common/listen-now-menu/ListenNowMenu";
 import { SectionIds } from "util/constants/Sections";
-import { RightIcon } from "util/icons/Icon";
+import { RightIcon, VideoIcon } from "util/icons/Icon";
 
 import "./Releases.scss";
 
@@ -16,11 +16,7 @@ export const SectionReleases: FC = () => {
     const { data } = useData();
 
     return (
-        <Section
-            id={SectionIds.Releases}
-            title="RELEASES"
-            className="section-releases"
-        >
+        <Section id={SectionIds.Music} title="MUSIC" className="section-music">
             <SimpleGrid
                 mt="16"
                 w="100%"
@@ -46,7 +42,7 @@ export const SectionReleases: FC = () => {
                                     justifyContent="space-between"
                                 >
                                     <Box>
-                                        <Text className="title">
+                                        <Text className="title" fontSize="lg">
                                             {release.title}
                                         </Text>
                                         <Text className="artists">
@@ -54,26 +50,18 @@ export const SectionReleases: FC = () => {
                                                 .map((artist) => artist.name)
                                                 .join(",")}
                                         </Text>
-                                        <Text
-                                            className="description"
-                                            pt="1"
-                                            fontSize="sm"
-                                            noOfLines={4}
-                                            display={
-                                                idx > 0
-                                                    ? {
-                                                          base: "none",
-                                                          md: "-webkit-box",
-                                                      }
-                                                    : "-webkit-box"
-                                            }
-                                        >
-                                            {release.description}
-                                        </Text>
                                     </Box>
 
                                     <Flex gap="4">
                                         <ListenNowMenu release={release} />
+                                        <Button
+                                            variant="link"
+                                            mt="4"
+                                            fontSize="xs"
+                                            leftIcon={<VideoIcon />}
+                                        >
+                                            Music Video
+                                        </Button>
                                     </Flex>
                                 </Flex>
                             </>
@@ -81,14 +69,14 @@ export const SectionReleases: FC = () => {
                     </Box>
                 ))}
             </SimpleGrid>
-            <Button
+            {/* <Button
                 mt={{ base: 4, md: 16 }}
                 color="white"
                 variant="big"
                 rightIcon={<RightIcon ml="4" fontSize="lg" />}
             >
                 VIEW ALL RELEASES
-            </Button>
+            </Button> */}
         </Section>
     );
 };

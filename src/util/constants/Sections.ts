@@ -1,6 +1,6 @@
 export enum SectionIds {
     Landing = "section-landing",
-    Releases = "section-releases",
+    Music = "section-music",
     AboutMe = "section-about-me",
     Events = "section-events",
     Contact = "section-contact",
@@ -12,8 +12,8 @@ export const Sections = [
         label: "Home",
     },
     {
-        id: SectionIds.Releases,
-        label: "Releases",
+        id: SectionIds.Music,
+        label: "Music",
     },
     {
         id: SectionIds.AboutMe,

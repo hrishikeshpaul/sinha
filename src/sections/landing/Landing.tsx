@@ -19,7 +19,7 @@ export const Landing: FC = () => {
                 size="lg"
                 icon={<DownIcon />}
                 onClick={() => {
-                    scrollToSection(SectionIds.Releases);
+                    scrollToSection(SectionIds.Music);
                 }}
             />
         </Center>
