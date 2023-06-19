@@ -1,10 +1,23 @@
 import { FC } from "react";
-import { Flex, Image, Stack, Text } from "@chakra-ui/react";
+import {
+    Box,
+    Button,
+    Center,
+    Flex,
+    Image,
+    Stack,
+    Text,
+} from "@chakra-ui/react";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 import { Section } from "sections/Section";
 import { SectionIds } from "util/constants/Sections";
+import { useData } from "services/Data";
+import { ArrowRightIcon } from "@chakra-ui/icons";
+import { RightIcon } from "util/icons/Icon";
 
 export const AboutMe: FC = () => {
+    const { data } = useData();
     return (
         <Section
             id={SectionIds.AboutMe}
@@ -39,6 +52,28 @@ export const AboutMe: FC = () => {
                         situation.
                     </Text>
                 </Flex>
+
+                <Box>
+                    <Text fontWeight="500">
+                        Here are some pictures from my shows and events
+                    </Text>
+                    <br />
+                    <ResponsiveMasonry
+                        columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
+                    >
+                        <Masonry columnsCount={2} gutter="16px">
+                            {data.gallery.map((gal) => (
+                                <Image src={gal.src} key={gal.src} />
+                            ))}
+                        </Masonry>
+                    </ResponsiveMasonry>
+                    <br />
+                    <Center>
+                        <Button variant="outline" fontSize="xs">
+                            See more pictures
+                        </Button>
+                    </Center>
+                </Box>
             </Stack>
         </Section>
     );

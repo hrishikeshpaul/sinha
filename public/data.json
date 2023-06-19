@@ -41,5 +41,19 @@
             },
             "musicVideo": ""
         }
+    ],
+    "gallery": [
+        {
+            "src": "gallery/1.jpeg"
+        },
+        {
+            "src": "gallery/2.jpeg"
+        },
+        {
+            "src": "gallery/3.jpeg"
+        },
+        {
+            "src": "gallery/4.jpeg"
+        }
     ]
 }

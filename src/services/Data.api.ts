@@ -19,9 +19,14 @@ export interface ReleasesType extends SocialsType {
     description: string;
 }
 
+export interface GalleryType {
+    src: string
+}
+
 export interface DataType {
     socials: SocialsType;
     releases: ReleasesType[];
+    gallery: GalleryType[];
 }
 
 const DATA_URL_DEV = "./data.json";
