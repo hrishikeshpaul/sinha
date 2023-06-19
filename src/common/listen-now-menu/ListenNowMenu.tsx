@@ -18,7 +18,7 @@ interface Props {
 
 export const ListenNowMenu: FC<Props> = ({ release }) => {
     return (
-        <Menu>
+        <Menu placement='top'>
             <MenuButton
                 as={Button}
                 variant="outline"

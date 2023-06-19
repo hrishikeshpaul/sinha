@@ -21,7 +21,25 @@
                 "spotify": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ",
                 "appleMusic": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ",
                 "youtube": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ"
-            }
+            },
+            "musicVideo": ""
+        },
+        {
+            "id": 1,
+            "art": "https://drive.google.com/uc?id=1kK60uB-PvPOVYzAHPxGSPSodQ28gT00m",
+            "artThumnail": "",
+            "title": "Name of the song",
+            "artists": [
+                {
+                    "name": "SINHA"
+                }
+            ],
+            "stream": {
+                "spotify": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ",
+                "appleMusic": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ",
+                "youtube": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ"
+            },
+            "musicVideo": ""
         }
     ]
 }
