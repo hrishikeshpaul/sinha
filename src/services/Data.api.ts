@@ -17,10 +17,18 @@ export interface ReleasesType extends SocialsType {
     title: string;
     artists: ArtistsType[];
     description: string;
+    musicVideo: string;
 }
 
 export interface GalleryType {
-    src: string
+    src: string;
+}
+
+export interface EventType {
+    title: string;
+    datetime: string;
+    venue: string;
+    link: string
 }
 
 export interface DataType {

@@ -63,9 +63,9 @@ export const SectionReleases: FC = () => {
                                 <Box
                                     className="art-overlay"
                                     position="absolute"
-                                    left="50%"
-                                    top="50%"
-                                    transform="translate(-50%, -50%)"
+                                    // left="50%"
+                                    // top="50%"
+                                    // transform="translate(-50%, -50%)"
                                 >
                                     <Box>
                                         <Text className="title">
@@ -81,14 +81,16 @@ export const SectionReleases: FC = () => {
                             </Flex>
                             <Flex gap="6" mt="2">
                                 <ListenNowMenu release={release} />
-                                <Button
-                                    variant="link"
-                                    mt="4"
-                                    fontSize="xs"
-                                    leftIcon={<VideoIcon />}
-                                >
-                                    Music Video
-                                </Button>
+                                {release.musicVideo && (
+                                    <Button
+                                        variant="link"
+                                        mt="4"
+                                        fontSize="xs"
+                                        leftIcon={<VideoIcon />}
+                                    >
+                                        Music Video
+                                    </Button>
+                                )}
                             </Flex>
                         </Flex>
                     </SwiperSlide>
