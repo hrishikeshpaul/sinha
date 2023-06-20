@@ -8,6 +8,7 @@ import {
     Stack,
     Text,
     Textarea,
+    Image,
 } from "@chakra-ui/react";
 
 import { Section } from "sections/Section";
@@ -35,24 +36,25 @@ export const Contact: FC = () => {
                 }}
             >
                 <Box display={{ base: "none", md: "block" }}>
-                    <Text>A picture of you goes here with a hi</Text>
+                    <Image src="images/contact.jpeg" />
                 </Box>
-                <Stack spacing="8">
-                    <Box>
-                        <Label>Name</Label>
-                        <Input />
-                    </Box>
-                    <Box>
-                        <Label>Email</Label>
-                        <Input />
-                    </Box>
-                    <Box>
-                        <Label>Message</Label>
-                        <Textarea rows={8} />
-                    </Box>
-
-                    <Button variant="big">Send</Button>
-                </Stack>
+                <form>
+                    <Stack spacing="8">
+                        <Box>
+                            <Label>Name</Label>
+                            <Input />
+                        </Box>
+                        <Box>
+                            <Label>Email</Label>
+                            <Input />
+                        </Box>
+                        <Box>
+                            <Label>Message</Label>
+                            <Textarea rows={8} />
+                        </Box>
+                        <Button variant="big">Send</Button>
+                    </Stack>
+                </form>
             </SimpleGrid>
         </Section>
     );

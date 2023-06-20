@@ -31,7 +31,7 @@ export const AboutMe: FC = () => {
                 >
                     <Image
                         width={{ base: "100%", md: "50%" }}
-                        src="about-me-1.jpeg"
+                        src="images/about-me.jpeg"
                     />
                     <Text
                         fontSize="lg"

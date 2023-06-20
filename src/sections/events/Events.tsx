@@ -8,9 +8,9 @@ export const Events: FC = () => {
         <Section
             id={SectionIds.Events}
             className="section-events"
-            title="EVENTS"
+            title="UPCOMING EVENTS"
         >
-            events
+            Upcoming events
         </Section>
     );
 };

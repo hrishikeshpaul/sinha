@@ -44,16 +44,16 @@
     ],
     "gallery": [
         {
-            "src": "gallery/1.jpeg"
+            "src": "images/gallery/1.jpeg"
         },
         {
-            "src": "gallery/2.jpeg"
+            "src": "images/gallery/2.jpeg"
         },
         {
-            "src": "gallery/3.jpeg"
+            "src": "images/gallery/3.jpeg"
         },
         {
-            "src": "gallery/4.jpeg"
+            "src": "images/gallery/4.jpeg"
         }
     ]
 }
