@@ -13,6 +13,7 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { Section } from "sections/Section";
 import { SectionIds } from "util/constants/Sections";
 import { useData } from "services/Data";
+import { imageTransition } from "util/constants/Transition";
 
 export const AboutMe: FC = () => {
     const { data } = useData();
@@ -31,7 +32,8 @@ export const AboutMe: FC = () => {
                 >
                     <Image
                         width={{ base: "100%", md: "50%" }}
-                        src="images/about-me.jpeg"
+                        src="images/about-me.webp"
+                        {...imageTransition}
                     />
                     <Text
                         fontSize="lg"
@@ -57,11 +59,15 @@ export const AboutMe: FC = () => {
                     </Text>
                     <br />
                     <ResponsiveMasonry
-                        columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
+                        columnsCountBreakPoints={{ 350: 2, 750: 3, 900: 4 }}
                     >
-                        <Masonry columnsCount={2} gutter="16px">
+                        <Masonry columnsCount={4} gutter="16px">
                             {data.gallery.map((gal) => (
-                                <Image src={gal.src} key={gal.src} />
+                                <Image
+                                    src={gal.src}
+                                    key={gal.src}
+                                    {...imageTransition}
+                                />
                             ))}
                         </Masonry>
                     </ResponsiveMasonry>

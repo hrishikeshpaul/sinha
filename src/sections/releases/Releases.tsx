@@ -47,7 +47,10 @@ export const SectionReleases: FC = () => {
                 className="music-swiper"
             >
                 {data.releases.map((release, idx) => (
-                    <SwiperSlide className="music-swiper-item-wrapper">
+                    <SwiperSlide
+                        className="music-swiper-item-wrapper"
+                        key={release.id}
+                    >
                         <Flex
                             flexDir="column"
                             alignItems="center"
@@ -63,9 +66,6 @@ export const SectionReleases: FC = () => {
                                 <Box
                                     className="art-overlay"
                                     position="absolute"
-                                    // left="50%"
-                                    // top="50%"
-                                    // transform="translate(-50%, -50%)"
                                 >
                                     <Box>
                                         <Text className="title">

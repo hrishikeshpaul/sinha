@@ -1,4 +1,6 @@
 {
+    "aboutMeImg": "images/about-me.webp",
+    "contactMeImg": "images/contact.webp",
     "socials": {
         "appleMusic": "",
         "spotify": "",
@@ -44,19 +46,17 @@
     ],
     "gallery": [
         {
-            "src": "images/gallery/1.jpeg"
+            "src": "https://drive.google.com/uc?id=1tm7RzZVkrkLJSYXKMg4jee2uAazH-u8-"
         },
         {
-            "src": "images/gallery/2.jpeg"
+            "src": "https://drive.google.com/uc?id=1TavnnVXbLzYe2_4uj-R-Zg5ekL65dcL_"
         },
         {
-            "src": "images/gallery/3.jpeg"
+            "src": "https://drive.google.com/uc?id=1HI-30z8Oq2xP2nHB2UmoIw_o2lfXoH2S"
         },
         {
-            "src": "images/gallery/4.jpeg"
+            "src": "https://drive.google.com/uc?id=1xKHVwHtGryJTnR3r8NFGYvrX5e_3t6pJ"
         }
     ],
-    "events": [
-        {}
-    ]
+    "events": []
 }

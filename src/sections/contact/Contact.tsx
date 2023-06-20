@@ -13,8 +13,12 @@ import {
 
 import { Section } from "sections/Section";
 import { SectionIds } from "util/constants/Sections";
+import { useData } from "services/Data";
+import { imageTransition } from "util/constants/Transition";
 
 export const Contact: FC = () => {
+    const { data } = useData();
+
     const Label: FC<{ children: string }> = ({ children }) => {
         return (
             <Text pb="2" fontSize="sm" fontWeight="600">
@@ -36,7 +40,7 @@ export const Contact: FC = () => {
                 }}
             >
                 <Box display={{ base: "none", md: "block" }}>
-                    <Image src="images/contact.jpeg" />
+                    <Image src={data.contactMeImg} {...imageTransition} />
                 </Box>
                 <form>
                     <Stack spacing="8">
