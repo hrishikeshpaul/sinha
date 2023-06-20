@@ -31,7 +31,7 @@
                 "appleMusic": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ",
                 "youtube": "https://open.spotify.com/album/4dtbZSJssIOYdLiYjkbwUS?si=CZqxZQBhRCeB3HKGD7jqiQ"
             },
-            "musicVideo": ""
+            "musicVideo": "alksfjalsjkf"
         },
         {
             "id": 1,
@@ -65,5 +65,13 @@
             "src": "https://drive.google.com/uc?id=1xKHVwHtGryJTnR3r8NFGYvrX5e_3t6pJ"
         }
     ],
-    "events": []
+    "events": [
+        {
+            "title": "",
+            "datetime": "",
+            "venue": "",
+            "image": "",
+            "link": ""
+        }
+    ]
 }

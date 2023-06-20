@@ -35,6 +35,15 @@ export const LeftIcon = createIcon({
     },
 });
 
+export const UpIcon = createIcon({
+    displayName: "UpIcon",
+    viewBox: "0 0 32 32",
+    d: ARROW_PATH,
+    defaultProps: {
+        fontSize: "2xl",
+    },
+});
+
 export {
     BsSpotify as SpotifyIcon,
     BsApple as AppleIcon,

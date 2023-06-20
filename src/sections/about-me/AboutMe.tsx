@@ -34,9 +34,6 @@ export const AboutMe: FC = () => {
                     <Image
                         width={{ base: "100%", md: "50%" }}
                         src={data.about.image}
-                        onLoad={() => {
-                            console.log("about me image loaded");
-                        }}
                         {...imageTransition}
                     />
                     <Box
@@ -62,9 +59,9 @@ export const AboutMe: FC = () => {
                     </Text>
                     <br />
                     <ResponsiveMasonry
-                        columnsCountBreakPoints={{ 350: 2, 750: 3, 900: 4 }}
+                        columnsCountBreakPoints={{ 350: 2, 750: 2, 900: 3 }}
                     >
-                        <Masonry columnsCount={4} gutter="16px">
+                        <Masonry columnsCount={3} gutter="16px">
                             {data.gallery.map((gal) => (
                                 <Image
                                     src={gal.src}

@@ -34,16 +34,6 @@ export const Socials: FC<Props> = ({
             {...props}
         >
             <Tooltip
-                label="Apple Music"
-                placement={orientation === "row" ? "bottom" : "left"}
-            >
-                <IconButton
-                    size={{ base: "md", md: "lg" }}
-                    aria-label="apple-music-icon"
-                    icon={<AppleIcon />}
-                />
-            </Tooltip>
-            <Tooltip
                 label="Instagram"
                 placement={orientation === "row" ? "bottom" : "left"}
             >
@@ -51,6 +41,16 @@ export const Socials: FC<Props> = ({
                     size={{ base: "md", md: "lg" }}
                     aria-label="instagram-icon"
                     icon={<InstagramIcon />}
+                />
+            </Tooltip>
+            <Tooltip
+                label="Youtube"
+                placement={orientation === "row" ? "bottom" : "left"}
+            >
+                <IconButton
+                    size={{ base: "md", md: "lg" }}
+                    aria-label="youtube-icon"
+                    icon={<YoutubeIcon />}
                 />
             </Tooltip>
             <Tooltip
@@ -64,6 +64,17 @@ export const Socials: FC<Props> = ({
                 />
             </Tooltip>
             <Tooltip
+                label="Apple Music"
+                placement={orientation === "row" ? "bottom" : "left"}
+            >
+                <IconButton
+                    size={{ base: "md", md: "lg" }}
+                    aria-label="apple-music-icon"
+                    icon={<AppleIcon />}
+                />
+            </Tooltip>
+
+            <Tooltip
                 label="Tidal"
                 placement={orientation === "row" ? "bottom" : "left"}
             >
@@ -71,16 +82,6 @@ export const Socials: FC<Props> = ({
                     size={{ base: "md", md: "lg" }}
                     aria-label="tidal-icon"
                     icon={<TidalIcon />}
-                />
-            </Tooltip>
-            <Tooltip
-                label="Youtube"
-                placement={orientation === "row" ? "bottom" : "left"}
-            >
-                <IconButton
-                    size={{ base: "md", md: "lg" }}
-                    aria-label="youtube-icon"
-                    icon={<YoutubeIcon />}
                 />
             </Tooltip>
         </Flex>
