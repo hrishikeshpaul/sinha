@@ -10,7 +10,7 @@ export const Events: FC = () => {
             className="section-events"
             title="UPCOMING EVENTS"
         >
-            Upcoming events
+            No upcoming events
         </Section>
     );
 };

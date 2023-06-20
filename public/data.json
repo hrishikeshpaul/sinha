@@ -8,6 +8,13 @@
         "tidal": "",
         "youtube": ""
     },
+    "about": {
+        "image": "images/about-me.webp",
+        "description": [
+            "It was their first date and she had been looking forward to it the entire week. She had her eyes on him for months, and it had taken a convoluted scheme with several friends to make it happen, but he'd finally taken the hint and asked her out. After all the time and effort she'd invested into it, she never thought that it would be anything but wonderful. It goes without saying that things didn't work out quite as she expected.",
+            "The river slowly meandered through the open space. It had hidden secrets that it didn't want to reveal. It had a well-planned strategy to appear calm, inviting, and appealing. That's how the river lured her unknowing victims to her water's edge."
+        ]
+    },
     "releases": [
         {
             "id": 0,

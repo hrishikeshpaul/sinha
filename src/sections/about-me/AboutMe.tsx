@@ -17,6 +17,7 @@ import { imageTransition } from "util/constants/Transition";
 
 export const AboutMe: FC = () => {
     const { data } = useData();
+
     return (
         <Section
             id={SectionIds.AboutMe}
@@ -32,10 +33,10 @@ export const AboutMe: FC = () => {
                 >
                     <Image
                         width={{ base: "100%", md: "50%" }}
-                        src="images/about-me.webp"
+                        src={data.about.image}
                         {...imageTransition}
                     />
-                    <Text
+                    <Box
                         fontSize="lg"
                         p={{ base: "0", md: 4 }}
                         bg="gray.900"
@@ -43,14 +44,13 @@ export const AboutMe: FC = () => {
                         width={{ base: "100%", md: "50%" }}
                         right={{ base: "0", md: 8 }}
                     >
-                        It was a good idea. At least, they all thought it was a
-                        good idea at the time. Hindsight would reveal that in
-                        reality, it was an unbelievably terrible idea, but it
-                        would take another week for them to understand that.
-                        Right now, at this very moment. they all agreed that it
-                        was the perfect course of action for the current
-                        situation.
-                    </Text>
+                        {data.about.description.map((desc) => (
+                            <>
+                                <Text key={desc}>{desc}</Text>
+                                <br />
+                            </>
+                        ))}
+                    </Box>
                 </Flex>
 
                 <Box>

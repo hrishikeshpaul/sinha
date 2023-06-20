@@ -28,7 +28,12 @@ export interface EventType {
     title: string;
     datetime: string;
     venue: string;
-    link: string
+    link: string;
+}
+
+export interface AboutMeType {
+    description: string[];
+    image: string;
 }
 
 export interface DataType {
@@ -37,6 +42,7 @@ export interface DataType {
     socials: SocialsType;
     releases: ReleasesType[];
     gallery: GalleryType[];
+    about: AboutMeType;
 }
 
 const DATA_URL_DEV = "./data.json";
