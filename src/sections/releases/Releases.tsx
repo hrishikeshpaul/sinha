@@ -79,7 +79,7 @@ export const SectionReleases: FC = () => {
                                     </Box>
                                 </Box>
                             </Flex>
-                            <Flex gap="6">
+                            <Flex gap="6" mt="2">
                                 <ListenNowMenu release={release} />
                                 <Button
                                     variant="link"
@@ -98,7 +98,7 @@ export const SectionReleases: FC = () => {
                     justifyContent="space-between"
                     w="100%"
                     alignItems="center"
-                    padding={{ base: 0, md: 4 }}
+                    py={{ base: 0, md: 4 }}
                     marginTop="4"
                 >
                     <IconButton
