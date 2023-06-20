@@ -3,6 +3,49 @@
         width: 100%;
         padding-top: 50px;
         padding-bottom: 50px;
+
+        .swiper-pagination-bullet {
+            width: 20px;
+            height: 4px;
+            border-radius: 0;
+            position: relative;
+            overflow: hidden;
+            transition: background 200ms;
+            background-color: gray;
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        .swiper-pagination-bullet-active {
+            background: gray;
+
+            &::before {
+                background-color: white;
+                animation: slide-progress 2s cubic-bezier(0.3, 0, 0.3, 1)
+                    forwards;
+
+                .swiper-paused & {
+                    // opacity: 0;
+                    animation-play-state: paused;
+                }
+            }
+        }
+
+        .swiper-pagination {
+            position: relative;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+        }
     }
 
     .swiper-slide {

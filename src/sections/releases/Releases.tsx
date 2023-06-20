@@ -1,16 +1,16 @@
 import { FC } from "react";
 
-import { Button } from "@chakra-ui/button";
+import { Button, IconButton } from "@chakra-ui/button";
 import { Image } from "@chakra-ui/image";
 import { Box, Text, Flex } from "@chakra-ui/layout";
-import { EffectCoverflow, Pagination } from "swiper";
+import { EffectCoverflow, Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Section } from "sections/Section";
 import { useData } from "services/Data";
 import { ListenNowMenu } from "common/listen-now-menu/ListenNowMenu";
 import { SectionIds } from "util/constants/Sections";
-import { VideoIcon } from "util/icons/Icon";
+import { LeftIcon, RightIcon, VideoIcon } from "util/icons/Icon";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -35,8 +35,15 @@ export const SectionReleases: FC = () => {
                     modifier: 1,
                     slideShadows: true,
                 }}
-                pagination={true}
-                modules={[EffectCoverflow, Pagination]}
+                pagination={{
+                    el: ".swiper-pagination",
+                    clickable: true,
+                }}
+                navigation={{
+                    nextEl: ".next",
+                    prevEl: ".prev",
+                }}
+                modules={[EffectCoverflow, Pagination, Navigation]}
                 className="music-swiper"
             >
                 {data.releases.map((release, idx) => (
@@ -83,22 +90,34 @@ export const SectionReleases: FC = () => {
                                     Music Video
                                 </Button>
                             </Flex>
-
-                            {/* <Flex bg="gray.800" width="100%" p="4">
-                                <Box>
-                                    <Text className="title">
-                                        {release.title}
-                                    </Text>
-                                    <Text className="artists" fontSize="sm">
-                                        {release.artists
-                                            .map((artist) => artist.name)
-                                            .join(",")}
-                                    </Text>
-                                </Box>
-                            </Flex> */}
                         </Flex>
                     </SwiperSlide>
                 ))}
+
+                <Flex
+                    justifyContent="space-between"
+                    w="100%"
+                    alignItems="center"
+                    padding={{ base: 0, md: 4 }}
+                    marginTop="4"
+                >
+                    <IconButton
+                        variant="ghost"
+                        aria-label="down button"
+                        size="lg"
+                        icon={<LeftIcon />}
+                        className="prev"
+                    />
+                    <div className="swiper-pagination"></div>
+
+                    <IconButton
+                        variant="ghost"
+                        aria-label="down button"
+                        size="lg"
+                        icon={<RightIcon />}
+                        className="next"
+                    />
+                </Flex>
             </Swiper>
         </Section>
     );

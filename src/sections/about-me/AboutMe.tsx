@@ -13,8 +13,6 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { Section } from "sections/Section";
 import { SectionIds } from "util/constants/Sections";
 import { useData } from "services/Data";
-import { ArrowRightIcon } from "@chakra-ui/icons";
-import { RightIcon } from "util/icons/Icon";
 
 export const AboutMe: FC = () => {
     const { data } = useData();
