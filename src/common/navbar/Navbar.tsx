@@ -20,6 +20,8 @@ export const Navbar: FC = () => {
                 maxW={MAX_WIDTH}
                 px="4"
                 py={{ base: "4", md: "1" }}
+                data-aos="fade-down"
+                data-aos-delay="500"
             >
                 <Center
                     justifyContent={{ base: "flex-end", md: "center" }}

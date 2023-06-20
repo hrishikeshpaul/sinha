@@ -27,7 +27,9 @@ export const DataProvider: FC<{ children: ReactNode }> = ({ children }) => {
             setLoading(true);
             const data = await readData();
 
-            setLoading(false);
+            setTimeout(() => {
+                setLoading(false);
+            }, 1000);
             setData(data);
         })();
     }, []);

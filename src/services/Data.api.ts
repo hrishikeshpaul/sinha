@@ -38,7 +38,6 @@ export interface AboutMeType {
 
 export interface DataType {
     contactMeImg: string;
-    aboutMeImg: string;
     socials: SocialsType;
     releases: ReleasesType[];
     gallery: GalleryType[];

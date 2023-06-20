@@ -1,10 +1,11 @@
-import { FC, ReactNode, useLayoutEffect } from "react";
-
+import { FC, ReactNode, useEffect, useLayoutEffect } from "react";
 import { BrowserRouter, useLocation } from "react-router-dom";
+import AOS from "aos";
 
 import { DataProvider } from "services/Data";
 import { Router } from "router/Router";
 
+import "aos/dist/aos.css";
 import "./App.scss";
 
 const ScrollWrapper: FC<{ children: ReactNode }> = ({ children }) => {
@@ -18,6 +19,10 @@ const ScrollWrapper: FC<{ children: ReactNode }> = ({ children }) => {
 };
 
 export const App: FC = () => {
+    useEffect(() => {
+        AOS.init({ once: true });
+    }, []);
+
     return (
         <BrowserRouter>
             <ScrollWrapper>

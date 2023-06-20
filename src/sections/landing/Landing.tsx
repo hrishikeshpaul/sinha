@@ -12,6 +12,9 @@ export const Landing: FC = () => {
         <Center className="landing" h="full" w="full" id={SectionIds.Landing}>
             <Title />
             <IconButton
+                data-aos="fade-up"
+                data-aos-delay="500"
+                data-aos-offset="0"
                 variant="ghost"
                 aria-label="down button"
                 position="absolute"

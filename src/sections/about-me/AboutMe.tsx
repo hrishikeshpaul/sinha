@@ -34,6 +34,9 @@ export const AboutMe: FC = () => {
                     <Image
                         width={{ base: "100%", md: "50%" }}
                         src={data.about.image}
+                        onLoad={() => {
+                            console.log("about me image loaded");
+                        }}
                         {...imageTransition}
                     />
                     <Box
@@ -44,11 +47,11 @@ export const AboutMe: FC = () => {
                         width={{ base: "100%", md: "50%" }}
                         right={{ base: "0", md: 8 }}
                     >
-                        {data.about.description.map((desc) => (
-                            <>
-                                <Text key={desc}>{desc}</Text>
+                        {data.about.description.map((desc, idx) => (
+                            <Box key={desc}>
+                                <Text>{desc}</Text>
                                 <br />
-                            </>
+                            </Box>
                         ))}
                     </Box>
                 </Flex>
