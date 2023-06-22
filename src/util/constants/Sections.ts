@@ -31,9 +31,12 @@ export const Sections = [
 
 export const scrollToSection = (sectionId: SectionIds) => {
     const section = document.querySelector(`#${sectionId}`);
+    const y = section!.getBoundingClientRect().top + window.pageYOffset - 120;
+    console.log(section, y);
 
-    section?.scrollIntoView({
+    window.scrollTo({
         behavior: "smooth",
-        block: "start",
+        // block: "start",
+        top: y,
     });
 };

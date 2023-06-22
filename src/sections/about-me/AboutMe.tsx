@@ -47,7 +47,9 @@ export const AboutMe: FC = () => {
                         {data.about.description.map((desc, idx) => (
                             <Box key={desc}>
                                 <Text>{desc}</Text>
-                                <br />
+                                {idx < data.about.description.length - 1 && (
+                                    <br />
+                                )}
                             </Box>
                         ))}
                     </Box>

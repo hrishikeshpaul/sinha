@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Box, Flex, IconButton, Tooltip } from "@chakra-ui/react";
+import { Box, Flex, IconButton, Tooltip, Text } from "@chakra-ui/react";
 
 import { Socials } from "common/socials/Socials";
 import { UpIcon } from "util/icons/Icon";
@@ -24,6 +24,10 @@ export const Footer: FC = () => {
                     />
                 </Tooltip>
             </Flex>
+
+            <Text textAlign="center" fontSize="sm" mt="4">
+                Copyright © {new Date().getFullYear()} SINHA{" "}
+            </Text>
         </Box>
     );
 };

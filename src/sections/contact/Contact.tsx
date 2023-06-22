@@ -76,9 +76,7 @@ export const Contact: FC = () => {
             className="section-contact"
             title="CONTACT"
         >
-            <Text textAlign="center" mb="16">
-                Please react out for mixing, mastering etc.
-            </Text>
+            <Text mb="16">Please react out for mixing, mastering etc.</Text>
             <SimpleGrid
                 gridGap="32px"
                 gridTemplateColumns={{
