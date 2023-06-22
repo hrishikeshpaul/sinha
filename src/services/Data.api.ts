@@ -36,12 +36,18 @@ export interface AboutMeType {
     image: string;
 }
 
+export interface PresaveType {
+    link: string;
+    date: string;
+}
+
 export interface DataType {
     contactMeImg: string;
     socials: SocialsType;
     releases: ReleasesType[];
     gallery: GalleryType[];
     about: AboutMeType;
+    presave: PresaveType;
 }
 
 const DATA_URL_DEV = "./data.json";

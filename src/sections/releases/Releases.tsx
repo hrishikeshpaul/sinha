@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import { Button, IconButton } from "@chakra-ui/button";
 import { Image } from "@chakra-ui/image";
-import { Box, Text, Flex } from "@chakra-ui/layout";
+import { Box, Text, Flex, Center } from "@chakra-ui/layout";
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -23,6 +23,7 @@ export const SectionReleases: FC = () => {
 
     return (
         <Section id={SectionIds.Music} title="MUSIC" className="section-music">
+            <Center></Center>
             <Swiper
                 effect={"coverflow"}
                 grabCursor={true}

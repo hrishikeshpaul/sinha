@@ -1,3 +1,4 @@
+import { Text } from "@chakra-ui/react";
 import { FC } from "react";
 
 import { Section } from "sections/Section";
@@ -10,7 +11,7 @@ export const Events: FC = () => {
             className="section-events"
             title="UPCOMING EVENTS"
         >
-            No upcoming events
+            <Text textAlign="center">No upcoming events</Text>
         </Section>
     );
 };
