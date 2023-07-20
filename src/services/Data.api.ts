@@ -51,7 +51,7 @@ export interface DataType {
 }
 
 const DATA_URL_DEV = "./data.json";
-const DATA_URL_PROD = "";
+const DATA_URL_PROD = "https://raw.githubusercontent.com/hrishikeshpaul/sinha/main/public/data.json";
 
 export const readData = async (): Promise<DataType> => {
     const request = await fetch(
